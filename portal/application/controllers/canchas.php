@@ -11,6 +11,7 @@ class Canchas extends CI_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
         $this->load->model('admin/ubigeo_model');
+        $this->load->model('admin/canchas_model');
     }
 
     public function index() {
@@ -25,6 +26,8 @@ class Canchas extends CI_Controller {
         $data['main_content'] = 'canchas/qry_view';
         $data['title'] = '.: Solo Canchas - Busqueda de Canchas :.';
         $data['menu_home'] = 'canchas';
+        $data['list_canchas'] = $this->canchas_model->canchasQry(array('LISTADO-CANCHAS-CRITERIO','','','',''));
+            
         $this->load->view('master/template_view', $data);
     }
 

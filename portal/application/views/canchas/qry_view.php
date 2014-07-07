@@ -65,448 +65,454 @@
 
                 <div class="media-items row">
 
-                    <div class="col-lg-3 col-md-4 col-sm-6 mix category-photos" data-nameorder="1" data-dateorder="3">
 
-                        <!-- Media Item -->
-                        <div class="media-item animate-onscroll ">
-
-                            <div class="media-image">
-
-                                <img src="<?php echo URL_IMG; ?>img-demo3.jpg" alt="">
-
-                                <div class="media-hover">
-                                    <div class="media-icons">
-                                        <a href="<?php echo URL_IMG; ?>img-demo3.jpg" data-group="media-jackbox" data-thumbnail="img/media/media1.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
-                                        <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
+                    <?php foreach ($list_canchas as $list_canchas) { ?>
 
 
-                            <div class="media-info">
+                        <div class="col-lg-3 col-md-4 col-sm-6 mix category-photos" data-nameorder="1" data-dateorder="3">
 
-                                <div class="media-header">
+                            <!-- Media Item -->
+                            <div class="media-item animate-onscroll ">
 
-                                    <div class="media-caption">
-                                        <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores</a></h2>
+                                <div class="media-image">
+
+                                    <img src="<?php echo URL_IMG; ?>img-demo3.jpg" alt="">
+
+                                    <div class="media-hover">
+                                        <div class="media-icons">
+                                            <a href="<?php echo URL_IMG; ?>img-demo3.jpg" data-group="media-jackbox" data-thumbnail="img/media/media1.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
+                                            <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
+                                        </div>
                                     </div>
 
                                 </div>
 
-                                <div class="media-description">
-                                    <p>
-                                        <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-home"></i> Trujillo, La Libertad
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-phone"></i> 4510001 / 984471883
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-flag-1"></i> 3 Canchas
-                                    </p>
+
+                                <div class="media-info">
+
+                                    <div class="media-header">
+
+                                        <div class="media-caption">
+                                            <h2><a href="portfolio-single-sidebar.html"><?php echo $list_canchas->cCanNombre; ?></a></h2>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="media-description">
+                                        <p>
+                                            <i class="icons icon-location"></i> <?php echo $list_canchas->direccion; ?>
+                                        </p>
+                                        <p>
+                                            <i class="icons icon-home"></i> <?php echo $list_canchas->distrito; ?>, <?php echo $list_canchas->departamento; ?>
+                                        </p>
+                                        <p>
+                                            <i class="icons icon-phone"></i> <?php echo $list_canchas->telefono; ?>
+                                        </p>
+                                        <p>
+                                            <i class="icons icon-flag-1"></i> <?php echo $list_canchas->nro_canchas; ?>
+                                        </p>
+                                    </div>
+
+                                    <div class="media-button">
+                                        <a href="<?php echo URL_MAIN; ?>canchas/informacion/<?php echo $list_canchas->cCanNombre."-".$list_canchas->nCanID; ?>" target="_blank" class="button big button-arrow">Ver detalle</a>									</div>
+
                                 </div>
 
-                                <div class="media-button">
-                                    <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>									</div>
 
                             </div>
-
-
+                            <!-- /Media Item -->							
                         </div>
-                        <!-- /Media Item -->							
-                    </div>
 
-                    <div class="col-lg-3 col-md-4 col-sm-6 mix category-videos category-meetings" data-nameorder="2" data-dateorder="1">
-
-                        <!-- Media Item -->
-                        <div class="media-item animate-onscroll ">
-
-                            <div class="media-image">
-
-                                <img src="<?php echo URL_IMG; ?>img-demo4.jpg" alt="">
-
-                                <div class="media-hover">
-                                    <div class="media-icons">
-                                        <a href="https://www.youtube.com/watch?v=1WbQe-wVK9E" data-group="media-jackbox" data-thumbnail="<?php echo URL_IMG; ?>img-demo3.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
-                                        <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                            <div class="media-info">
-
-                                <div class="media-header">
-
-                                    <div class="media-caption">
-                                        <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores</a></h2>
-                                    </div>
-
-                                </div>
-
-                                <div class="media-description">
-                                    <p>
-                                        <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-home"></i> Trujillo, La Libertad
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-phone"></i> 4510001 / 984471883
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-flag-1"></i> 3 Canchas
-                                    </p>
-                                </div>
-
-                                <div class="media-button">
-                                    <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>									</div>
-
-                            </div>
-
-
-                        </div>
-                        <!-- /Media Item -->							
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4 col-sm-6 mix category-campaign category-videos category-meetings" data-nameorder="3" data-dateorder="2">
-
-                        <!-- Media Item -->
-                        <div class="media-item animate-onscroll ">
-
-                            <div class="media-image">
-
-                                <img src="<?php echo URL_IMG; ?>img-demo5.jpg" alt="">
-
-                                <div class="media-hover">
-                                    <div class="media-icons">
-                                        <a href="https://www.youtube.com/watch?v=1WbQe-wVK9E" data-group="media-jackbox" data-thumbnail="img/media/media3.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
-                                        <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                            <div class="media-info">
-
-                                <div class="media-header">
-
-                                    <div class="media-caption">
-                                        <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores</a></h2>
-                                    </div>
-
-                                </div>
-
-                                <div class="media-description">
-                                    <p>
-                                        <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-home"></i> Trujillo, La Libertad
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-phone"></i> 4510001 / 984471883
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-flag-1"></i> 3 Canchas
-                                    </p>
-                                </div>
-
-                                <div class="media-button">
-                                    <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-                        <!-- /Media Item -->							
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4 col-sm-6 mix category-campaign category-photos" data-nameorder="4" data-dateorder="5">
-
-                        <!-- Media Item -->
-                        <div class="media-item animate-onscroll ">
-
-                            <div class="media-image">
-
-                                <img src="<?php echo URL_IMG; ?>img-demo6.jpg" alt="">
-
-                                <div class="media-hover">
-                                    <div class="media-icons">
-                                        <a href="img/media/media4.jpg" data-group="media-jackbox" data-thumbnail="img/media/media4.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
-                                        <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                            <div class="media-info">
-
-                                <div class="media-header">
-
-                                    <div class="media-caption">
-                                        <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores</a></h2>
-                                    </div>
-
-                                </div>
-
-                                <div class="media-description">
-                                    <p>
-                                        <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-home"></i> Trujillo, La Libertad
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-phone"></i> 4510001 / 984471883
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-flag-1"></i> 3 Canchas
-                                    </p>
-                                </div>
-
-                                <div class="media-button">
-                                    <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>								</div>
-
-                            </div>
-
-
-                        </div>
-                        <!-- /Media Item -->							
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4 col-sm-6 mix category-videos category-meetings" data-nameorder="5" data-dateorder="4">
-
-                        <!-- Media Item -->
-                        <div class="media-item animate-onscroll ">
-
-                            <div class="media-image">
-
-                                <img src="<?php echo URL_IMG; ?>img-demo7.jpg" alt="">
-
-                                <div class="media-hover">
-                                    <div class="media-icons">
-                                        <a href="https://www.youtube.com/watch?v=1WbQe-wVK9E" data-group="media-jackbox" data-thumbnail="img/media/media5.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
-                                        <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                            <div class="media-info">
-
-                                <div class="media-header">
-
-                                    <div class="media-caption">
-                                        <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores </a></h2>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="media-description">
-                                    <p>
-                                        <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-home"></i> Trujillo, La Libertad
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-phone"></i> 4510001 / 984471883
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-flag-1"></i> 3 Canchas
-                                    </p>
-                                </div>
-
-                                <div class="media-button">
-                                    <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-                        <!-- /Media Item -->							
-                    </div>
-
-
-
-                    <div class="col-lg-3 col-md-4 col-sm-6 mix category-campaign category-meetings" data-nameorder="6" data-dateorder="6">
-
-                        <!-- Media Item -->
-                        <div class="media-item animate-onscroll ">
-
-                            <div class="media-image">
-
-                                <img src="<?php echo URL_IMG; ?>img-demo8.jpg" alt="">
-
-                                <div class="media-hover">
-                                    <div class="media-icons">
-                                        <a href="img/media/media6.jpg" data-group="media-jackbox" data-thumbnail="img/media/media6.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
-                                        <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                            <div class="media-info">
-
-                                <div class="media-header">
-
-
-                                    <div class="media-caption">
-                                        <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores</a></h2>
-                                    </div>
-
-                                </div>
-
-                                <div class="media-description">
-                                    <p>
-                                        <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-home"></i> Trujillo, La Libertad
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-phone"></i> 4510001 / 984471883
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-flag-1"></i> 3 Canchas
-                                    </p>
-                                </div>
-
-                                <div class="media-button">
-                                    <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-                        <!-- /Media Item -->							
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4 col-sm-6 mix category-photos" data-nameorder="1" data-dateorder="3">
-
-                        <!-- Media Item -->
-                        <div class="media-item animate-onscroll ">
-
-                            <div class="media-image">
-
-                                <img src="<?php echo URL_IMG; ?>img-demo4.jpg" alt="">
-
-                                <div class="media-hover">
-                                    <div class="media-icons">
-                                        <a href="img/media/media7.jpg" data-group="media-jackbox" data-thumbnail="img/media/media1.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
-                                        <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                            <div class="media-info">
-
-                                <div class="media-header">
-
-                                    <div class="media-caption">
-                                        <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores</a></h2>
-                                    </div>
-
-                                </div>
-
-                                <div class="media-description">
-                                    <p>
-                                        <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-home"></i> Trujillo, La Libertad
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-phone"></i> 4510001 / 984471883
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-flag-1"></i> 3 Canchas
-                                    </p>
-                                </div>
-
-                                <div class="media-button">
-                                    <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>								</div>
-
-                            </div>
-
-
-                        </div>
-                        <!-- /Media Item -->							
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6 mix category-videos category-meetings" data-nameorder="2" data-dateorder="1">
-
-                        <!-- Media Item -->
-                        <div class="media-item animate-onscroll ">
-
-                            <div class="media-image">
-
-                                <img src="<?php echo URL_IMG; ?>img-demo3.jpg" alt="">
-
-                                <div class="media-hover">
-                                    <div class="media-icons">
-                                        <a href="https://www.youtube.com/watch?v=1WbQe-wVK9E" data-group="media-jackbox" data-thumbnail="img/media/media8.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
-                                        <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                            <div class="media-info">
-
-                                <div class="media-header">
-
-                                    <div class="media-caption">
-                                        <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores</a></h2>
-                                    </div>
-
-                                </div>
-
-                                <div class="media-description">
-                                    <p>
-                                        <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-home"></i> Trujillo, La Libertad
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-phone"></i> 4510001 / 984471883
-                                    </p>
-                                    <p>
-                                        <i class="icons icon-flag-1"></i> 3 Canchas
-                                    </p>
-                                </div>
-
-                                <div class="media-button">
-                                    <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>									</div>
-
-                            </div>
-
-
-                        </div>
-                        <!-- /Media Item -->							
-                    </div>
+                    <?php } ?>
+
+                    <!--                    <div class="col-lg-3 col-md-4 col-sm-6 mix category-videos category-meetings" data-nameorder="2" data-dateorder="1">
+                    
+                                             Media Item 
+                                            <div class="media-item animate-onscroll ">
+                    
+                                                <div class="media-image">
+                    
+                                                    <img src="<?php echo URL_IMG; ?>img-demo4.jpg" alt="">
+                    
+                                                    <div class="media-hover">
+                                                        <div class="media-icons">
+                                                            <a href="https://www.youtube.com/watch?v=1WbQe-wVK9E" data-group="media-jackbox" data-thumbnail="<?php echo URL_IMG; ?>img-demo3.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
+                                                            <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
+                                                        </div>
+                                                    </div>
+                    
+                                                </div>
+                    
+                    
+                                                <div class="media-info">
+                    
+                                                    <div class="media-header">
+                    
+                                                        <div class="media-caption">
+                                                            <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores</a></h2>
+                                                        </div>
+                    
+                                                    </div>
+                    
+                                                    <div class="media-description">
+                                                        <p>
+                                                            <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-home"></i> Trujillo, La Libertad
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-phone"></i> 4510001 / 984471883
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-flag-1"></i> 3 Canchas
+                                                        </p>
+                                                    </div>
+                    
+                                                    <div class="media-button">
+                                                        <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>									</div>
+                    
+                                                </div>
+                    
+                    
+                                            </div>
+                                             /Media Item 							
+                                        </div>-->
+
+
+                    <!--                    <div class="col-lg-3 col-md-4 col-sm-6 mix category-campaign category-videos category-meetings" data-nameorder="3" data-dateorder="2">
+                    
+                                             Media Item 
+                                            <div class="media-item animate-onscroll ">
+                    
+                                                <div class="media-image">
+                    
+                                                    <img src="<?php echo URL_IMG; ?>img-demo5.jpg" alt="">
+                    
+                                                    <div class="media-hover">
+                                                        <div class="media-icons">
+                                                            <a href="https://www.youtube.com/watch?v=1WbQe-wVK9E" data-group="media-jackbox" data-thumbnail="img/media/media3.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
+                                                            <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
+                                                        </div>
+                                                    </div>
+                    
+                                                </div>
+                    
+                    
+                                                <div class="media-info">
+                    
+                                                    <div class="media-header">
+                    
+                                                        <div class="media-caption">
+                                                            <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores</a></h2>
+                                                        </div>
+                    
+                                                    </div>
+                    
+                                                    <div class="media-description">
+                                                        <p>
+                                                            <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-home"></i> Trujillo, La Libertad
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-phone"></i> 4510001 / 984471883
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-flag-1"></i> 3 Canchas
+                                                        </p>
+                                                    </div>
+                    
+                                                    <div class="media-button">
+                                                        <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>
+                                                    </div>
+                    
+                                                </div>
+                    
+                    
+                                            </div>
+                                             /Media Item 							
+                                        </div>-->
+
+
+                    <!--                    <div class="col-lg-3 col-md-4 col-sm-6 mix category-campaign category-photos" data-nameorder="4" data-dateorder="5">
+                    
+                                             Media Item 
+                                            <div class="media-item animate-onscroll ">
+                    
+                                                <div class="media-image">
+                    
+                                                    <img src="<?php echo URL_IMG; ?>img-demo6.jpg" alt="">
+                    
+                                                    <div class="media-hover">
+                                                        <div class="media-icons">
+                                                            <a href="img/media/media4.jpg" data-group="media-jackbox" data-thumbnail="img/media/media4.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
+                                                            <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
+                                                        </div>
+                                                    </div>
+                    
+                                                </div>
+                    
+                    
+                                                <div class="media-info">
+                    
+                                                    <div class="media-header">
+                    
+                                                        <div class="media-caption">
+                                                            <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores</a></h2>
+                                                        </div>
+                    
+                                                    </div>
+                    
+                                                    <div class="media-description">
+                                                        <p>
+                                                            <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-home"></i> Trujillo, La Libertad
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-phone"></i> 4510001 / 984471883
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-flag-1"></i> 3 Canchas
+                                                        </p>
+                                                    </div>
+                    
+                                                    <div class="media-button">
+                                                        <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>								</div>
+                    
+                                                </div>
+                    
+                    
+                                            </div>
+                                             /Media Item 							
+                                        </div>-->
+
+
+                    <!--                    <div class="col-lg-3 col-md-4 col-sm-6 mix category-videos category-meetings" data-nameorder="5" data-dateorder="4">
+                    
+                                             Media Item 
+                                            <div class="media-item animate-onscroll ">
+                    
+                                                <div class="media-image">
+                    
+                                                    <img src="<?php echo URL_IMG; ?>img-demo7.jpg" alt="">
+                    
+                                                    <div class="media-hover">
+                                                        <div class="media-icons">
+                                                            <a href="https://www.youtube.com/watch?v=1WbQe-wVK9E" data-group="media-jackbox" data-thumbnail="img/media/media5.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
+                                                            <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
+                                                        </div>
+                                                    </div>
+                    
+                                                </div>
+                    
+                    
+                                                <div class="media-info">
+                    
+                                                    <div class="media-header">
+                    
+                                                        <div class="media-caption">
+                                                            <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores </a></h2>
+                    
+                                                        </div>
+                    
+                                                    </div>
+                    
+                                                    <div class="media-description">
+                                                        <p>
+                                                            <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-home"></i> Trujillo, La Libertad
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-phone"></i> 4510001 / 984471883
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-flag-1"></i> 3 Canchas
+                                                        </p>
+                                                    </div>
+                    
+                                                    <div class="media-button">
+                                                        <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>
+                                                    </div>
+                    
+                                                </div>
+                    
+                    
+                                            </div>
+                                             /Media Item 							
+                                        </div>-->
+
+
+                    <!--
+                                        <div class="col-lg-3 col-md-4 col-sm-6 mix category-campaign category-meetings" data-nameorder="6" data-dateorder="6">
+                    
+                                             Media Item 
+                                            <div class="media-item animate-onscroll ">
+                    
+                                                <div class="media-image">
+                    
+                                                    <img src="<?php echo URL_IMG; ?>img-demo8.jpg" alt="">
+                    
+                                                    <div class="media-hover">
+                                                        <div class="media-icons">
+                                                            <a href="img/media/media6.jpg" data-group="media-jackbox" data-thumbnail="img/media/media6.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
+                                                            <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
+                                                        </div>
+                                                    </div>
+                    
+                                                </div>
+                    
+                    
+                                                <div class="media-info">
+                    
+                                                    <div class="media-header">
+                    
+                    
+                                                        <div class="media-caption">
+                                                            <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores</a></h2>
+                                                        </div>
+                    
+                                                    </div>
+                    
+                                                    <div class="media-description">
+                                                        <p>
+                                                            <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-home"></i> Trujillo, La Libertad
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-phone"></i> 4510001 / 984471883
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-flag-1"></i> 3 Canchas
+                                                        </p>
+                                                    </div>
+                    
+                                                    <div class="media-button">
+                                                        <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>
+                                                    </div>
+                    
+                                                </div>
+                    
+                    
+                                            </div>
+                                             /Media Item 							
+                                        </div>-->
+
+
+                    <!--                    <div class="col-lg-3 col-md-4 col-sm-6 mix category-photos" data-nameorder="1" data-dateorder="3">
+                    
+                                             Media Item 
+                                            <div class="media-item animate-onscroll ">
+                    
+                                                <div class="media-image">
+                    
+                                                    <img src="<?php echo URL_IMG; ?>img-demo4.jpg" alt="">
+                    
+                                                    <div class="media-hover">
+                                                        <div class="media-icons">
+                                                            <a href="img/media/media7.jpg" data-group="media-jackbox" data-thumbnail="img/media/media1.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
+                                                            <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
+                                                        </div>
+                                                    </div>
+                    
+                                                </div>
+                    
+                    
+                                                <div class="media-info">
+                    
+                                                    <div class="media-header">
+                    
+                                                        <div class="media-caption">
+                                                            <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores</a></h2>
+                                                        </div>
+                    
+                                                    </div>
+                    
+                                                    <div class="media-description">
+                                                        <p>
+                                                            <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-home"></i> Trujillo, La Libertad
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-phone"></i> 4510001 / 984471883
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-flag-1"></i> 3 Canchas
+                                                        </p>
+                                                    </div>
+                    
+                                                    <div class="media-button">
+                                                        <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>								</div>
+                    
+                                                </div>
+                    
+                    
+                                            </div>
+                                             /Media Item 							
+                                        </div>-->
+
+                    <!--                    <div class="col-lg-3 col-md-4 col-sm-6 mix category-videos category-meetings" data-nameorder="2" data-dateorder="1">
+                    
+                                             Media Item 
+                                            <div class="media-item animate-onscroll ">
+                    
+                                                <div class="media-image">
+                    
+                                                    <img src="<?php echo URL_IMG; ?>img-demo3.jpg" alt="">
+                    
+                                                    <div class="media-hover">
+                                                        <div class="media-icons">
+                                                            <a href="https://www.youtube.com/watch?v=1WbQe-wVK9E" data-group="media-jackbox" data-thumbnail="img/media/media8.jpg" class="jackbox media-icon"><i class="icons icon-zoom-in"></i></a>
+                                                            <a href="portfolio-single-sidebar.html" class="media-icon"><i class="icons icon-link"></i></a>
+                                                        </div>
+                                                    </div>
+                    
+                                                </div>
+                    
+                    
+                                                <div class="media-info">
+                    
+                                                    <div class="media-header">
+                    
+                                                        <div class="media-caption">
+                                                            <h2><a href="portfolio-single-sidebar.html">VillaSports Precursores</a></h2>
+                                                        </div>
+                    
+                                                    </div>
+                    
+                                                    <div class="media-description">
+                                                        <p>
+                                                            <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-home"></i> Trujillo, La Libertad
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-phone"></i> 4510001 / 984471883
+                                                        </p>
+                                                        <p>
+                                                            <i class="icons icon-flag-1"></i> 3 Canchas
+                                                        </p>
+                                                    </div>
+                    
+                                                    <div class="media-button">
+                                                        <a href="#" target="_blank" class="button big button-arrow">Ver detalle</a>									</div>
+                    
+                                                </div>
+                    
+                    
+                                            </div>
+                                             /Media Item 							
+                                        </div>-->
 
 
                 </div>

@@ -7,10 +7,11 @@ class Multimedia extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-		$this->load->library('form_validation');		
-		$this->load->helper(array('form','url','codegen_helper'));
-		$this->load->model('model','',TRUE);
-	}
+        $this->load->library('session');
+        $this->load->library('form_validation');
+        $this->load->helper(array('form', 'url', 'codegen_helper'));
+        $this->load->model('codegen_model', '', TRUE);
+    }
     public function index() {
         $data['main_content'] = 'multimedia/contacto_view';
         $data['title'] = '.: Solo Canchas - Multimedia :.';
@@ -24,13 +25,13 @@ class Multimedia extends CI_Controller {
         
         //paging
         $config['base_url'] = base_url().'index.php/multimedia/manage/';
-        $config['total_rows'] = $this->model->count('multimedia');
+        $config['total_rows'] = $this->codegen_model->count('multimedia');
         $config['per_page'] = 3;	
         $this->pagination->initialize($config); 	
         // make sure to put the primarykey first when selecting , 
 		//eg. 'userID,name as Name , lastname as Last_Name' , Name and Last_Name will be use as table header.
 		// Last_Name will be converted into Last Name using humanize() function, under inflector helper of the CI core.
-		$this->data['results'] = $this->model->get('multimedia','nMultID,nMultTipoID,nMultCategID,cMultLinkMiniatura,cMultLink,cMultTitulo,cMultDescripcion,cMultFechaRegistro,cMultFechaInicial,cMultFechaFinal,nParID,cMultEstado,cMultNumVisitas','',$config['per_page'],$this->uri->segment(3));
+		$this->data['results'] = $this->codegen_model->get('multimedia','nMultID,nMultTipoID,nMultCategID,cMultLinkMiniatura,cMultLink,cMultTitulo,cMultDescripcion,cMultFechaRegistro,cMultFechaInicial,cMultFechaFinal,nParID,cMultEstado,cMultNumVisitas','',$config['per_page'],$this->uri->segment(3));
        
 	    $this->data['main_content'] = 'multimedia/list';
         $this->data['title'] = '.: Solo Canchas - Multimedia :.';
@@ -65,7 +66,7 @@ class Multimedia extends CI_Controller {
 					'cMultNumVisitas' => set_value('cMultNumVisitas')
             );
            
-			if ($this->model->add('multimedia',$data) == TRUE)
+			if ($this->codegen_model->add('multimedia',$data) == TRUE)
 			{
 				//$this->data['custom_error'] = '<div class="form_ok"><p>Added</p></div>';
 				// or redirect
@@ -106,7 +107,7 @@ class Multimedia extends CI_Controller {
 					'cMultNumVisitas' => $this->input->post('cMultNumVisitas')
             );
            
-			if ($this->model->edit('multimedia',$data,'nMultID',$this->input->post('nMultID')) == TRUE)
+			if ($this->codegen_model->edit('multimedia',$data,'nMultID',$this->input->post('nMultID')) == TRUE)
 			{
 				redirect(base_url().'index.php/multimedia/manage/');
 			}
@@ -117,15 +118,18 @@ class Multimedia extends CI_Controller {
 			}
 		}
 
-		$this->data['result'] = $this->model->get('multimedia','nMultID,nMultTipoID,nMultCategID,cMultLinkMiniatura,cMultLink,cMultTitulo,cMultDescripcion,cMultFechaRegistro,cMultFechaInicial,cMultFechaFinal,nParID,cMultEstado,cMultNumVisitas','nMultID = '.$this->uri->segment(3),NULL,NULL,true);
+		$this->data['result'] = $this->codegen_model->get('multimedia','nMultID,nMultTipoID,nMultCategID,cMultLinkMiniatura,cMultLink,cMultTitulo,cMultDescripcion,cMultFechaRegistro,cMultFechaInicial,cMultFechaFinal,nParID,cMultEstado,cMultNumVisitas','nMultID = '.$this->uri->segment(3),NULL,NULL,true);
 		
-		$this->load->view('multimedia_edit', $this->data);		
+		$this->data['main_content'] = 'multimedia/multimedia_edit';
+        $this->data['title'] = '.: Solo Canchas - Multimedia :.';
+        $this->data['menu_home'] = 'multimedia';
+        $this->load->view('master/template_view', $this->data);	
         //$this->template->load('content', 'multimedia_edit', $this->data);
     }
 	
     function delete(){
             $ID =  $this->uri->segment(3);
-            $this->model->delete('multimedia','nMultID',$ID);             
+            $this->codegen_model->delete('multimedia','nMultID',$ID);             
             redirect(base_url().'index.php/multimedia/manage/');
     }
 

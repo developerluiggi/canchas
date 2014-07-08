@@ -1,3 +1,14 @@
+
+<link href="<?php echo URL_CSS; ?>calendar.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="<?php echo URL_JS; ?>calendar.js"></script>
+<script type="text/javascript">
+    var calendar = $("#calendar").calendar(
+        {
+            tmpl_path: "/tmpls/",
+            events_source: function () { return []; }
+        });         
+</script>
+
 <section id="content">			
 
 	
@@ -87,11 +98,11 @@
 								<span class="day">2</span>
 								<ul class="events">
 									<li>
-										<a href="event-post-v1.html">Sed in lacus ut enim</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Sed in lacus ut enim</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Sed in lacus ut enim</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Sed in lacus ut enim</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -103,11 +114,11 @@
 									</div>
 																			</li>
 									<li>
-										<a href="event-post-v1.html">Integer rutrum ante...</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Integer rutrum ante...</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Integer rutrum ante...</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Integer rutrum ante...</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -119,11 +130,11 @@
 									</div>
 																			</li>
 									<li>
-										<a href="event-post-v1.html">Vestibulum libero</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Vestibulum libero</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Vestibulum libero</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Vestibulum libero</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -146,11 +157,11 @@
 								<span class="day">6</span>
 								<ul class="events">
 									<li>
-										<a href="event-post-v1.html">Nemo enim ipsam</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Nemo enim ipsam</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Nemo enim ipsam</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Nemo enim ipsam</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -162,11 +173,11 @@
 									</div>
 																			</li>
 									<li>
-										<a href="event-post-v1.html">Voluptatem quia...</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Voluptatem quia...</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Voluptatem quia...</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Voluptatem quia...</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -184,11 +195,11 @@
 								<span class="day">8</span>
 								<ul class="events">
 									<li>
-										<a href="event-post-v1.html">Pellentesque sed do...</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Pellentesque sed do...</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Pellentesque sed do...</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Pellentesque sed do...</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -205,11 +216,11 @@
 								<span class="day">9</span>
 								<ul class="events">
 									<li>
-										<a href="event-post-v1.html">Aliquam dapibus</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Aliquam dapibus</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Aliquam dapibus</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Aliquam dapibus</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -221,11 +232,11 @@
 									</div>
 																			</li>
 									<li>
-										<a href="event-post-v1.html">Tincidunt metus</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Tincidunt metus</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Tincidunt metus</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Tincidunt metus</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -243,11 +254,11 @@
 								<span class="day">11</span>
 								<ul class="events">
 									<li>
-										<a href="event-post-v1.html">Donec sit amet eros</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Donec sit amet eros</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Donec sit amet eros</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Donec sit amet eros</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -259,11 +270,11 @@
 									</div>
 																			</li>
 									<li>
-										<a href="event-post-v1.html">Lorem ipsum dolor</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Lorem ipsum dolor</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Lorem ipsum dolor</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Lorem ipsum dolor</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -275,11 +286,11 @@
 									</div>
 																			</li>
 									<li>
-										<a href="event-post-v1.html">Sit amet consectetu...</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Sit amet consectetu...</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Sit amet consectetu...</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Sit amet consectetu...</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -291,11 +302,11 @@
 									</div>
 																			</li>
 									<li>
-										<a href="event-post-v1.html">Adipiscing elit</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Adipiscing elit</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Adipiscing elit</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Adipiscing elit</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -317,11 +328,11 @@
 								<span class="day">14</span>
 								<ul class="events">
 									<li>
-										<a href="event-post-v1.html">Donec porta diam eu </a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Donec porta diam eu </a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Donec porta diam eu</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Donec porta diam eu</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -338,11 +349,11 @@
 								<span class="day">15</span>
 								<ul class="events">
 									<li>
-										<a href="event-post-v1.html">Duis ac turpis</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Duis ac turpis</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Duis ac turpis</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Duis ac turpis</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -354,11 +365,11 @@
 									</div>
 																			</li>
 									<li>
-										<a href="event-post-v1.html">Donec sit amet eros</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Donec sit amet eros</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Donec sit amet eros</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Donec sit amet eros</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -370,11 +381,11 @@
 									</div>
 																			</li>
 									<li>
-										<a href="event-post-v1.html">Lorem ipsum dolor</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Lorem ipsum dolor</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Lorem ipsum dolor</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Lorem ipsum dolor</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -392,11 +403,11 @@
 								<span class="day">17</span>
 								<ul class="events">
 									<li>
-										<a href="event-post-v1.html">Aenean auctor wisi</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Aenean auctor wisi</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Aenean auctor wisi</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Aenean auctor wisi</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -414,11 +425,11 @@
 								<span class="day">19</span>
 								<ul class="events">
 									<li>
-										<a href="event-post-v1.html">Mauris fermentum...</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Mauris fermentum...</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Mauris fermentum...</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Mauris fermentum...</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -430,11 +441,11 @@
 									</div>
 																			</li>
 									<li>
-										<a href="event-post-v1.html">Dictum magna</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Dictum magna</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Dictum magna</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Dictum magna</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -454,11 +465,11 @@
 								<span class="day">20</span>
 								<ul class="events">
 									<li>
-										<a href="event-post-v1.html">Ut tellus dolor, dapib...</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Ut tellus dolor, dapib...</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Ut tellus dolor, dapib...</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Ut tellus dolor, dapib...</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -470,11 +481,11 @@
 									</div>
 																			</li>
 									<li>
-										<a href="event-post-v1.html">Eget elementum vel</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Eget elementum vel</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Eget elementum vel</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Eget elementum vel</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -486,11 +497,11 @@
 									</div>
 																			</li>
 									<li>
-										<a href="event-post-v1.html">Cursus eleifend</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Cursus eleifend</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Cursus eleifend</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Cursus eleifend</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -502,11 +513,11 @@
 									</div>
 								</li>
 									<li>
-										<a href="event-post-v1.html">Aenean auctor wisi...</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Aenean auctor wisi...</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Aenean auctor wisi...</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Aenean auctor wisi...</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -526,11 +537,11 @@
 								<span class="day">24</span>
 								<ul class="events">
 									<li>
-										<a href="event-post-v1.html">Sed ut perspiciatis</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Sed ut perspiciatis</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Sed ut perspiciatis</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Sed ut perspiciatis</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -542,11 +553,11 @@
 									</div>
 																			</li>
 									<li>
-										<a href="event-post-v1.html">Unde omnis</a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Unde omnis</a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Unde omnis</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Unde omnis</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -570,11 +581,11 @@
 								<span class="day">29</span>
 								<ul class="events">
 									<li>
-										<a href="event-post-v1.html">Fusce euismod </a>
+										<a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Fusce euismod </a>
 										
 									<div class="event-popover">
 										
-										<h6><a href="event-post-v1.html">Fusce euismod</a></h6>
+										<h6><a href="<?php echo URL_MAIN ?>eventos/mostrar/1112343qa">Fusce euismod</a></h6>
 										<ul class="event-meta">
 											<li><i class="icons icon-clock"></i> 4:00 pm - 6:00 pm</li>
 											<li><i class="icons icon-location"></i> 340 W 50th St.New York</li>
@@ -621,3 +632,5 @@
 	<!-- /Section -->
 
 </section>
+
+<!-- /crear y modificar calendario https://github.com/Serhioromano/bootstrap-calendar  -->

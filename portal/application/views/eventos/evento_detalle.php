@@ -1,6 +1,9 @@
 <section id="content">
 	
-	
+	<?php 
+		foreach ($result as $value) {
+
+	 ?>
 	<!-- Page Heading -->
 	<section class="section page-heading animate-onscroll">
 		
@@ -40,8 +43,7 @@
 							
 							<h6>Description</h6>
 							
-							<p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. 
-							<br><br> Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue. <br><br>Quisque diam lorem, interdum vitae,dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipisMauris accumsan nulla vel diam. </p>
+							<p><?php $value[nEveID]; ?></p>
 							
 						</div>
 						
@@ -168,4 +170,8 @@
 		</div>
 						
 	</section>
+	<?php 
+
+		}
+	?>
 </section>

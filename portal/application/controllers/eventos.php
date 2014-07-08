@@ -10,7 +10,7 @@ class Eventos extends CI_Controller {
         $this->load->library('session');
         $this->load->library('form_validation');
         $this->load->helper(array('form', 'url', 'codegen_helper'));
-        $this->load->model('model', '', TRUE);
+        $this->load->model('codegen_model', '', TRUE);
     }
 
     public function index() {
@@ -27,15 +27,16 @@ class Eventos extends CI_Controller {
         $this->load->view('master/template_view', $data);
     }
 
-    public function mostrar($id_evento = null) {
-        $data['main_content'] = 'eventos/evento_detalle';
-        $data['title'] = '.: Solo Canchas - Eventos :.';
-        $data['menu_home'] = 'Eventos';
-        $data['prueba'] = $id_evento;
-        if ($id_evento != null)
-            $this->load->view('master/template_view', $data);
-        else
-            redirect('/eventos');
+    public function mostrar() {
+
+        
+        $this->data['result'] = $this->codegen_model->get('eventos', 'nEveID,cEveLatitud,cEveLongitud,cEveTitulo,cEveDescripcion,cEveLinkFoto,cEveLinkFacebook,cEveDireccion,dEveStartTime,dEveEndTime,nUbiDepartamento,nUbiProvincia,nUbiDistrito,dEveFechaRegistro,cEveEstado,nEveCosto', 'nEveID = '. $this->uri->segment(3), 1, null);
+        
+        $this->data['main_content'] = 'eventos/evento_detalle';
+        $this->data['title'] = '.: Solo Canchas - Eventos :.';
+        $this->data['menu_home'] = 'Eventos';
+
+        $this->load->view('master/template_view', $this->data);
     }
 
     public function manage() {
@@ -44,13 +45,13 @@ class Eventos extends CI_Controller {
 
         //paging
         $config['base_url'] = base_url() . 'index.php/eventos/manage/';
-        $config['total_rows'] = $this->model->count('eventos');
+        $config['total_rows'] = $this->codegen_model->count('eventos');
         $config['per_page'] = 3;
         $this->pagination->initialize($config);
         // make sure to put the primarykey first when selecting , 
         //eg. 'userID,name as Name , lastname as Last_Name' , Name and Last_Name will be use as table header.
         // Last_Name will be converted into Last Name using humanize() function, under inflector helper of the CI core.
-        $this->data['results'] = $this->model->get('eventos', 'nEveID,cEveLatitud,cEveLongitud,cEveTitulo,cEveDescripcion,cEveLinkFoto,cEveLinkFacebook,cEveDireccion,dEveStartTime,dEveEndTime,nUbiDepartamento,nUbiProvincia,nUbiDistrito,dEveFechaRegistro,cEveEstado,nEveCosto', '', $config['per_page'], $this->uri->segment(3));
+        $this->data['results'] = $this->codegen_model->get('eventos', 'nEveID,cEveLatitud,cEveLongitud,cEveTitulo,cEveDescripcion,cEveLinkFoto,cEveLinkFacebook,cEveDireccion,dEveStartTime,dEveEndTime,nUbiDepartamento,nUbiProvincia,nUbiDistrito,dEveFechaRegistro,cEveEstado,nEveCosto', 'nEveID = 1', $config['per_page'], $this->uri->segment(3));
 
         $this->data['main_content'] = 'eventos/list';
         $this->data['title'] = '.: Solo Canchas - Eventos :.';
@@ -84,7 +85,7 @@ class Eventos extends CI_Controller {
                 'nEveCosto' => set_value('nEveCosto')
             );
 
-            if ($this->model->add('eventos', $data) == TRUE) {
+            if ($this->codegen_model->add('eventos', $data) == TRUE) {
                 //$this->data['custom_error'] = '<div class="form_ok"><p>Added</p></div>';
                 // or redirect
                 redirect(base_url() . 'index.php/eventos/manage/');
@@ -121,22 +122,24 @@ class Eventos extends CI_Controller {
                 'nEveCosto' => $this->input->post('nEveCosto')
             );
 
-            if ($this->model->edit('eventos', $data, 'nEveID', $this->input->post('nEveID')) == TRUE) {
+            if ($this->codegen_model->edit('eventos', $data, 'nEveID', $this->input->post('nEveID')) == TRUE) {
                 redirect(base_url() . 'index.php/eventos/manage/');
             } else {
                 $this->data['custom_error'] = '<div class="form_error"><p>An Error Occured</p></div>';
             }
         }
 
-        $this->data['result'] = $this->model->get('eventos', 'nEveID,cEveLatitud,cEveLongitud,cEveTitulo,cEveDescripcion,cEveLinkFoto,cEveLinkFacebook,cEveDireccion,dEveStartTime,dEveEndTime,nUbiDepartamento,nUbiProvincia,nUbiDistrito,dEveFechaRegistro,cEveEstado,nEveCosto', 'nEveID = ' . $this->uri->segment(3), NULL, NULL, true);
-
-        $this->load->view('eventos_edit', $this->data);
+        $this->data['result'] = $this->codegen_model->get('eventos', 'nEveID,cEveLatitud,cEveLongitud,cEveTitulo,cEveDescripcion,cEveLinkFoto,cEveLinkFacebook,cEveDireccion,dEveStartTime,dEveEndTime,nUbiDepartamento,nUbiProvincia,nUbiDistrito,dEveFechaRegistro,cEveEstado,nEveCosto', 'nEveID = ' . $this->uri->segment(3), 1, NULL);
+        $this->data['main_content'] = 'eventos/evento_edit';
+        $this->data['title'] = '.: Solo Canchas - Eventos :.';
+        $this->data['menu_home'] = 'Eventos';
+        $this->load->view('master/template_view', $this->data);
         //$this->template->load('content', 'eventos_edit', $this->data);
     }
 
     function delete() {
         $ID = $this->uri->segment(3);
-        $this->model->delete('eventos', 'nEveID', $ID);
+        $this->codegen_model->delete('eventos', 'nEveID', $ID);
         redirect(base_url() . 'index.php/eventos/manage/');
     }
 

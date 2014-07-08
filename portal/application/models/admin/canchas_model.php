@@ -142,6 +142,43 @@ class Canchas_model extends CI_Model {
             return null;
         }
     }
+    
+    function canchasQryOtros($Parametros) {
+        $query = $this->db->query("CALL USP_GEN_S_CANCHAS (?,?,?,?,?)", $Parametros);
+        $this->db->close();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return null;
+        }
+    }
+    
+    
+    function canchasGet($Parametros) {
+        $query = $this->db->query("CALL USP_GEN_S_CANCHAS (?,?,?,?,?)", $Parametros);
+        $this->db->close();
+        if ($query) {
+            $row = $query->row();
+            //CREANDO EL OBJETO
+            $this->setCanID($row->nCanID);
+            $this->setCanNombre($row->cCanNombre);
+            $this->setCanDescripcion($row->cCanDescripcion);
+            $this->setCanLatitud($row->cCanLatitud);
+            $this->setCanLongitud($row->cCanLongitud);
+            $this->setCanFechaRegistro($row->fecha_registro);
+            $this->setCanDireccion($row->direccion);
+            $this->setCanTelefono($row->telefono);
+            $this->setCanNroCanchas($row->nro_canchas);
+            $this->setCanFacebook($row->facebook);
+            $this->setCanEmail($row->email);
+            $this->setCanSitioWeb($row->sitio_web);
+            $this->setCanVisitas($row->nCanVisitas);
+            $this->setCanEstado($row->cCanEstado);
+            return $row;
+        } else {
+            return null;
+        }
+    }
 
 }
 

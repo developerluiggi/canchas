@@ -4,7 +4,7 @@
     <!-- Page Heading -->
     <section class="section page-heading animate-onscroll">
 
-        <h1>VILLASPORTS PRECURSORES</h1>
+        <h1><?php echo $cCanNombre; ?></h1>
         <p class="breadcrumb"><a href="<?php echo URL_MAIN ?>">Inicio</a> / Cancha seleccionada</p>
 
     </section>
@@ -22,6 +22,7 @@
     <section class="section full-width-bg">
 
         <div class="row">
+            <?php ?>
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="row event-details">
 
@@ -30,20 +31,19 @@
                             <h6><i class="icons icon-info-circled"></i> INFORMACIÓN GENERAL</h6>
                         </div>
                         <p style="text-align: justify;">
-                            El producto esta en perfectas condiciones, totalmente operativa (9/10), se entrega la cámara. 
-                            (incluye: cargador, batería, memoria 4gb, cables para PC).
+                            <?php echo $cCanDescripcion; ?>
                         </p>
                         <p>
-                            <i class="icons icon-globe"></i> <a>http://companyname.com</a>
+                            <i class="icons icon-globe"></i> <b>Web: </b> <a>http://companyname.com</a>
                         </p>
                         <p>
-                            <i class="icons icon-mail-alt"></i> <a href="mailto:mail@companyname.com">mail@companyname.com</a>
+                            <i class="icons icon-mail-alt"></i> <b>Email: </b> <a href="mailto:mail@companyname.com"> <?php echo $cCanEmail; ?></a>
                         </p>
                         <p>
-                            <i class="icons icon-location"></i> Jr. Jose Aguilar Segura s/n
+                            <i class="icons icon-location"></i> <b>Dirección: </b>  <?php echo $cCanDireccion; ?>
                         </p>
                         <p>
-                            <i class="icons icon-ticket"></i> S/.30.00 Nuevos Soles
+                            <i class="icons icon-ticket"></i> <b>Precio: </b> S/.30.00 Nuevos Soles
                         </p>
                         <a class="button donate btn_reservar" target="_blank" href="http://adealoxica.es/WebCanchas/frmReserva.aspx?CIF=11111111A"><i class="icons icon-right-hand"></i> Reservar</a>
                     </div>
@@ -83,198 +83,15 @@
 
     <section class="section full-width-bg">
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <!-- Post Comments -->
-                <div class="post-comments">
-                    <div class="side-segment">
-                            <h3><i class="icons icon-chat"></i> Comentarios</h3>
-                        </div>
-                    <ul>
-                        <li>
-                            <div class="comment animate-onscroll">
-                                <div class="comment-author">
-                                    <img src="<?php echo URL_IMG; ?>testimonials/profile1.jpg" alt="">
-                                    <div class="author-meta">
-                                        <h6>Gloria Mann</h6>
-                                        <div class="comment-meta">
-                                            <span>September 23, 2013 at 11:45 am</span>
-                                            <span><a href="#">Reply</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="comment-content">
-                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna." 
-                                        Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit.</p>
-                                </div>
-                            </div>
-
-                            <ul>
-                                <li>
-                                    <div class="comment animate-onscroll">
-                                        <div class="comment-author">
-                                            <img src="<?php echo URL_IMG; ?>testimonials/profile5.jpg" alt="">
-                                            <div class="author-meta">
-                                                <h6>admin</h6>
-                                                <div class="comment-meta">
-                                                    <span>September 23, 2013 at 11:45 am</span>
-                                                    <span><a href="#">Reply</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="comment-content">
-                                            <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. </p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <div class="comment animate-onscroll">
-                                <div class="comment-author">
-                                    <img src="<?php echo URL_IMG; ?>testimonials/profile1.jpg" alt="">
-                                    <div class="author-meta">
-                                        <h6>Gloria Mann</h6>
-                                        <div class="comment-meta">
-                                            <span>September 23, 2013 at 11:45 am</span>
-                                            <span><a href="#">Reply</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="comment-content">
-                                    <p>Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <?php $this->load->view("canchas/comentarios_canchas_view"); ?>
         </div>
         <!-- /Post Comments -->
     </section>
 
-
-
     <!-- Related Events -->
     <section class="section full-width-bg">
-
-        <div class="row related-events">
-
-            <div class="col-lg-12 col-md-12 col-sm-12 animate-onscroll">
-                <div class="side-segment">
-                    <h3>Otras Canchas</h3>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 animate-onscroll">
-
-                <!-- Event Item -->
-                <div class="event-item">
-                    <div class="event-image">
-                        <div class="media-item gallery-item no-margin-bottom">
-                            <img src="<?php echo URL_IMG; ?>img-demo3.jpg" alt="">
-                            <div class="media-hover">
-                                <div class="media-icons">
-                                    <a class="jackbox media-icon" data-group="media-jackbox" href="<?php echo URL_IMG; ?>img-demo3.jpg"><i class="icons icon-eye"></i></a>
-                                    <a class="media-icon" href="<?php echo URL_MAIN ?>canchas/informacion/Villasports-Precursores"><i class="icons icon-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="event-info">
-                        <div class="event-content">
-                            <h6><a href="<?php echo URL_MAIN ?>canchas/informacion/Villasports-Precursores">VILLASPORTS PRECURSORES</a></h6>
-                            <ul class="event-meta">
-                                <li><i class="icons icon-clock"></i> Jr. Jose Aguilar Segura s/n</li>
-                                <li><i class="icons icon-home"></i> Trujillo, La Libertad</li>
-                                <li><i class="icons icon-phone"></i> 4510001 / 984471883</li>
-                                <li><i class="icons icon-flag-1"></i> 3 Canchas</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /Event Item -->
-
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 animate-onscroll">
-
-                <!-- Event Item -->
-                <div class="event-item">
-
-                    <div class="event-image">
-                        <div class="media-item gallery-item no-margin-bottom">
-                            <img src="<?php echo URL_IMG; ?>img-demo4.jpg" alt="">
-                            <div class="media-hover">
-                                <div class="media-icons">
-                                    <a class="jackbox media-icon" data-group="media-jackbox" href="<?php echo URL_IMG; ?>img-demo4.jpg"><i class="icons icon-eye"></i></a>
-                                    <a class="media-icon" href="<?php echo URL_MAIN ?>canchas/informacion/Villasports-Precursores"><i class="icons icon-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="event-info">
-                        <div class="event-content">
-                            <h6><a href="<?php echo URL_MAIN ?>canchas/informacion/Villasports-Precursores">VILLASPORTS PRECURSORES</a></h6>
-                            <ul class="event-meta">
-                                <li><i class="icons icon-clock"></i> Jr. Jose Aguilar Segura s/n</li>
-                                <li><i class="icons icon-home"></i> Trujillo, La Libertad</li>
-                                <li><i class="icons icon-phone"></i> 4510001 / 984471883</li>
-                                <li><i class="icons icon-flag-1"></i> 3 Canchas</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /Event Item -->
-
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 animate-onscroll">
-
-                <!-- Event Item -->
-                <div class="event-item">
-
-                    <div class="event-image">
-                        <div class="media-item gallery-item no-margin-bottom">
-                            <img src="<?php echo URL_IMG; ?>img-demo5.jpg" alt="">
-                            <div class="media-hover">
-                                <div class="media-icons">
-                                    <a class="jackbox media-icon" data-group="media-jackbox" href="<?php echo URL_IMG; ?>img-demo5.jpg"><i class="icons icon-eye"></i></a>
-                                    <a class="media-icon" href="<?php echo URL_MAIN ?>canchas/informacion/Villasports-Precursores"><i class="icons icon-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="event-info">
-                        <div class="event-content">
-                            <h6><a href="<?php echo URL_MAIN ?>canchas/informacion/Villasports-Precursores">VILLASPORTS PRECURSORES</a></h6>
-                            <ul class="event-meta">
-                                <li><i class="icons icon-clock"></i> Jr. Jose Aguilar Segura s/n</li>
-                                <li><i class="icons icon-home"></i> Trujillo, La Libertad</li>
-                                <li><i class="icons icon-phone"></i> 4510001 / 984471883</li>
-                                <li><i class="icons icon-flag-1"></i> 3 Canchas</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /Event Item -->
-
-            </div>
-
-        </div>
-
+        <?php $this->load->view("canchas/otras_canchas_view"); ?>
     </section>
     <!-- /Related Events -->
-
-
 
 </section>

@@ -39,7 +39,6 @@
 */
 
 $route['default_controller'] = "inicio";
-//$route['contactenos'] = "index.php/contactenos";
 $route['404_override'] = '';
 
 

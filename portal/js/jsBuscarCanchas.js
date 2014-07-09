@@ -51,7 +51,7 @@ function search_canchas(){
 function get_provincias(){
     $.ajax({
         type: "POST",
-        url: "http://"+ruta+"/portal/inicio/getUbigeo",
+        url: "http://"+ruta+"/portal/index.php/inicio/getUbigeo",
         cache: false,
         data: {
             'name_ubigeo' : 'provincias',
@@ -77,7 +77,7 @@ function get_provincias(){
 function get_distritos(){
     $.ajax({
         type: "POST",
-        url: "http://"+ruta+"/portal/inicio/getUbigeo",
+        url: "http://"+ruta+"/portal/index.php/inicio/getUbigeo",
         cache: false,
         data: {
             'name_ubigeo' : 'distritos',

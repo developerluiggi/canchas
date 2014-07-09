@@ -77,14 +77,14 @@
                         <img src="<?php echo URL_IMG; ?>new-demo.jpg" alt="">
                     </div>
 
-                    <h4 class="post-title"><a href="blog-single-sidebar.html">Las espectativas de los Brasileños</a></h4>
+                    <h4 class="post-title"><a href="blog-single-sidebar.html">Argentina vs Holanda: albicelestes y tulipanes se enfrentan por semifinal de Brasil 2014</a></h4>
 
                     <div class="post-meta">
                         <span>by <a href="#">admin</a></span>
                         <span>October 01, 2013 11:28AM</span>
                     </div>
 
-                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus.</p>
+                    <p>Decisivo duelo se jugará a partir de las 3:00 p.m. (hora peruana) en el Arena de Sao Paulo. El ganador se enfrentará, el domingo 13 de julio, a la selección de Alemania..</p>
 
                     <a href="blog-single-sidebar.html" class="button read-more-button big button-arrow">Read More</a>
 

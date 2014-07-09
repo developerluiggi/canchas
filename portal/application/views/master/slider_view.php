@@ -4,7 +4,7 @@
     <div class="tp-banner">
         <ul>
             <li data-transition="papercut" data-slotamount="7">
-                <img src="<?php echo URL_IMG; ?>slider/slider.jpg" alt="">
+                <img src="<?php echo URL_IMG; ?>slider/slider1.jpg" alt="">
 <!--                <div class="tp-caption"  data-x="100" data-y="115" data-speed="700" data-start="1000" data-easing="easeOutBack"><h2>Unity<br>Liberty<br>Solidarity</h2></div>
                 <div class="tp-caption"  data-x="100" data-y="310" data-speed="500" data-start="1200" data-easing="easeOutBack"><a href="#" class="button big">Find out more</a></div>-->
             </li>

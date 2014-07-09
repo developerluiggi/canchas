@@ -12,6 +12,7 @@ class Canchas extends CI_Controller {
         $this->load->library('form_validation');
         $this->load->model('admin/ubigeo_model');
         $this->load->model('admin/canchas_model');
+        $this->load->model('admin/comentarios_canchas_model');
     }
 
     public function index() {
@@ -23,12 +24,31 @@ class Canchas extends CI_Controller {
     }
 
     public function busqueda($criterio) {
+        $valor_criterio = explode("_", $criterio);
+        $texto_criterio = str_replace("-", " ", $valor_criterio[0]);
+
         $data['main_content'] = 'canchas/qry_view';
         $data['title'] = '.: Solo Canchas - Busqueda de Canchas :.';
         $data['menu_home'] = 'canchas';
-        $data['list_canchas'] = $this->canchas_model->canchasQry(array('LISTADO-CANCHAS-CRITERIO', '', '', '', ''));
+        $data['list_canchas'] = $this->canchas_model->canchasQry(
+                array(
+                    'LISTADO-CANCHAS-CRITERIO',
+                    $texto_criterio,
+                    $valor_criterio[1],
+                    $valor_criterio[2],
+                    $valor_criterio[3]
+                )
+        );
 
-        $this->load->view('master/template_view', $data);
+        if (count($data['list_canchas']) == 1) {
+            foreach ($data['list_canchas'] as $row) {
+                $id_cancha = $row->nCanID;
+                $name_cancha = $row->cCanNombre;
+            }
+            redirect("../canchas/informacion/".str_replace(" ", "-", $name_cancha) . "_" . $id_cancha);
+        } else {
+            $this->load->view('master/template_view', $data);
+        }
     }
 
     public function informacion($nombre_cancha_id) {
@@ -38,6 +58,8 @@ class Canchas extends CI_Controller {
         $data['title'] = '.: Solo Canchas - Información de la Cancha seleccionada :.';
         $data['menu_home'] = 'canchas';
         $data['list_otrascanchas'] = $this->canchas_model->canchasQryOtros(array('LISTADO-CANCHAS-OTROS', $cadena[1], '', '', ''));
+        $data['list_comentarios'] = $this->comentarios_canchas_model->comentarios_canchasQry(array('LISTADO-COMENTARIOS-CANCHAS-CRITERIO'));
+       
         $this->load->view('master/template_view', $data);
     }
 

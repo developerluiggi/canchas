@@ -5,7 +5,7 @@ $txt_fnd_cancha_nombre = form_input(array('name' => 'txt_fnd_cancha_nombre', 'id
 /* Generar el combo de Departamentos */
 $cbo_fnd_cancha_departamentos[''] = "Seleccionar Departamento";
 foreach ($list_departamentos as $list_departamentos) {
-    $cbo_fnd_cancha_departamentos[$list_departamentos->nUbiID] = $list_departamentos->cUbiDescripcion;
+    $cbo_fnd_cancha_departamentos[$list_departamentos->nUbiID] = ucwords(strtolower($list_departamentos->cUbiDescripcion));
 }
 
 /* Generar el combo de Provincias */

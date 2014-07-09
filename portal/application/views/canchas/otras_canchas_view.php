@@ -23,10 +23,10 @@
             <div class="event-item">
                 <div class="event-image">
                     <div class="media-item gallery-item no-margin-bottom">
-                        <img src="<?php echo URL_IMG; ?><?php echo $img_cancha; ?>" alt="">
+                        <img src="<?php echo URL_IMG; ?>img-demo-canchas/<?php echo $img_cancha; ?>" alt="">
                         <div class="media-hover">
                             <div class="media-icons">
-                                <a class="jackbox media-icon" data-group="media-jackbox" href="<?php echo URL_IMG; ?><?php echo $img_cancha; ?>"><i class="icons icon-eye"></i></a>
+                                <a class="jackbox media-icon" data-group="media-jackbox" href="<?php echo URL_IMG; ?>img-demo-canchas/<?php echo $img_cancha; ?>"><i class="icons icon-eye"></i></a>
                                 <a class="media-icon" href="<?php echo URL_MAIN; ?>canchas/informacion/<?php echo str_replace(" ", "-", $list_otrascanchas->cCanNombre) . "_" . $list_otrascanchas->nCanID; ?>"><i class="icons icon-link"></i></a>
                             </div>
                         </div>

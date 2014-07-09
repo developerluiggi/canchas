@@ -22,7 +22,7 @@
 
             <!-- Pages -->
             <li class="<?php if($menu_home == 'canchas') {  echo "current-menu-item"; } ?>">
-                <a href="http://solocanchas.com">Canchas</a>
+                <a href="<?php echo URL_MAIN ?>canchas">Canchas</a>
 <!--                <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="team.html">Team</a></li>

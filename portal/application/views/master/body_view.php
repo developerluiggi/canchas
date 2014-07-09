@@ -113,7 +113,7 @@
                             <div class="blog-post animate-onscroll">
                                 <div class="post-image">
                                     <a href="<?php echo URL_MAIN ?>canchas/informacion/Villasports-Precursores">
-                                        <img src="<?php echo URL_IMG; ?>img-demo3.jpg" alt="">
+                                        <img src="<?php echo URL_IMG; ?>img-demo-canchas/img-demo3.jpg" alt="">
                                     </a>
                                 </div>
 
@@ -149,7 +149,7 @@
                             <div class="blog-post animate-onscroll">
                                 <div class="post-image">
                                     <a href="<?php echo URL_MAIN ?>canchas/informacion/Villasports-Precursores">
-                                        <img src="<?php echo URL_IMG; ?>img-demo4.jpg" alt="">
+                                        <img src="<?php echo URL_IMG; ?>img-demo-canchas/img-demo4.jpg" alt="">
                                     </a>
                                 </div>
 
@@ -186,7 +186,7 @@
                             <div class="blog-post animate-onscroll">
                                 <div class="post-image">
                                     <a href="<?php echo URL_MAIN ?>canchas/informacion/Villasports-Precursores">
-                                        <img src="<?php echo URL_IMG; ?>img-demo5.jpg" alt="">
+                                        <img src="<?php echo URL_IMG; ?>img-demo-canchas/img-demo5.jpg" alt="">
                                     </a>
                                 </div>
 
@@ -222,7 +222,7 @@
                             <div class="blog-post animate-onscroll">
                                 <div class="post-image">
                                     <a href="<?php echo URL_MAIN ?>canchas/informacion/Villasports-Precursores">
-                                        <img src="<?php echo URL_IMG; ?>img-demo6.jpg" alt="">
+                                        <img src="<?php echo URL_IMG; ?>img-demo-canchas/img-demo6.jpg" alt="">
                                     </a>
                                 </div>
 
@@ -258,7 +258,7 @@
                             <div class="blog-post animate-onscroll">
                                 <div class="post-image">
                                     <a href="<?php echo URL_MAIN ?>canchas/informacion/Villasports-Precursores">
-                                        <img src="<?php echo URL_IMG; ?>img-demo7.jpg" alt="">
+                                        <img src="<?php echo URL_IMG; ?>img-demo-canchas/img-demo7.jpg" alt="">
                                     </a>
                                 </div>
 
@@ -295,7 +295,7 @@
 
                                 <div class="post-image">
                                     <a href="<?php echo URL_MAIN ?>canchas/informacion/Villasports-Precursores">
-                                        <img src="<?php echo URL_IMG; ?>img-demo8.jpg" alt="">
+                                        <img src="<?php echo URL_IMG; ?>img-demo-canchas/img-demo8.jpg" alt="">
                                     </a>
                                 </div>
 

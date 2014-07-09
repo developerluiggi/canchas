@@ -82,12 +82,12 @@ class Ubigeo_model extends CI_Model {
             $cbo_ubigeo[''] = "Seleccionar " . ucwords(substr($nom_mantenedor, 0, -1)) . "";
             if ($nom_mantenedor == "provincias") {
                 foreach ($array as $Ubigeo) {
-                    $cbo_ubigeo[$Ubigeo->nUbiProvincia] = $Ubigeo->cUbiDescripcion;
+                    $cbo_ubigeo[$Ubigeo->nUbiProvincia] = ucwords(strtolower($Ubigeo->cUbiDescripcion));
                 }
                 echo form_dropdown('cbo_'.$tipo_accion.'_'.$mantenedor.'_'.$nom_mantenedor, $cbo_ubigeo,'', 'id="cbo_'.$tipo_accion.'_'.$mantenedor.'_'.$nom_mantenedor . '" class="margin-bottom-control"');
             } else if ($nom_mantenedor == "distritos") {
                 foreach ($array as $Ubigeo) {
-                    $cbo_ubigeo[$Ubigeo->nUbiID] = $Ubigeo->cUbiDescripcion;
+                    $cbo_ubigeo[$Ubigeo->nUbiID] = ucwords(strtolower($Ubigeo->cUbiDescripcion));
                 }
                 echo form_dropdown('cbo_'.$tipo_accion.'_'.$mantenedor.'_'.$nom_mantenedor, $cbo_ubigeo, '', 'id="cbo_'.$tipo_accion.'_'.$mantenedor.'_'.$nom_mantenedor . '" class="margin-bottom-control"');
             }

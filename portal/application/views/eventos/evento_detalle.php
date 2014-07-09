@@ -1,14 +1,10 @@
 <section id="content">
 	
-	<?php 
-		foreach ($result as $value) {
 
-	 ?>
 	<!-- Page Heading -->
 	<section class="section page-heading animate-onscroll">
 		
-		<h1>Event post style 1</h1>
-		<p class="breadcrumb"><a href="main-v1.html">Home</a> / Event post style 1</p>
+		<h1><?=$result[0][cEveTitulo]?></h1>
 		
 	</section>
 	<!-- Page Heading -->
@@ -43,7 +39,7 @@
 							
 							<h6>Description</h6>
 							
-							<p><?php $value[nEveID]; ?></p>
+							<p><?=$result[0][cEveDescripcion]?> </p>
 							
 						</div>
 						
@@ -170,8 +166,4 @@
 		</div>
 						
 	</section>
-	<?php 
-
-		}
-	?>
 </section>

@@ -1,3 +1,5 @@
+
+
 <div class="col-lg-12 col-md-12 col-sm-12">
     <!-- Post Comments -->
     <div class="post-comments">
@@ -5,12 +7,15 @@
             <h3><i class="icons icon-chat"></i> Comentarios</h3>
         </div>
         <ul>
+            
+            <?php foreach($list_comentarios as $list_comentarios){ ?>
+            
             <li>
                 <div class="comment animate-onscroll">
                     <div class="comment-author">
                         <img src="<?php echo URL_IMG; ?>testimonials/profile1.jpg" alt="">
                         <div class="author-meta">
-                            <h6>Gloria Mann</h6>
+                            <h6><?php echo $list_comentarios->cComcaNombrePersona; ?></h6>
                             <div class="comment-meta">
                                 <span>September 23, 2013 at 11:45 am</span>
                                 <span><a href="#">Reply</a></span>
@@ -19,12 +24,13 @@
                     </div>
 
                     <div class="comment-content">
-                        <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna." 
-                            Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit.</p>
+                        <p>
+                            <?php echo $list_comentarios->cComcaTexto; ?>
+                        </p>
                     </div>
                 </div>
 
-                <ul>
+<!--                <ul>
                     <li>
                         <div class="comment animate-onscroll">
                             <div class="comment-author">
@@ -43,10 +49,11 @@
                             </div>
                         </div>
                     </li>
-                </ul>
+                </ul>-->
             </li>
+            <?php } ?>
 
-            <li>
+<!--            <li>
                 <div class="comment animate-onscroll">
                     <div class="comment-author">
                         <img src="<?php echo URL_IMG; ?>testimonials/profile1.jpg" alt="">
@@ -63,7 +70,7 @@
                         <p>Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
                     </div>
                 </div>
-            </li>
+            </li>-->
         </ul>
     </div>
 </div>

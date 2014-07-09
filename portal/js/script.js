@@ -1055,12 +1055,6 @@ $(document).ready(function(){
         });	
     }
 	
-	
-	
-	
-	
-	
-	
     /* Shopping Cart */
     function enableShoppingCart(){
 		
@@ -1079,18 +1073,9 @@ $(document).ready(function(){
                 $(this).remove();
             });
 			
-        });
-		
+        });	
     }
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
     /* Customize Box */
     function enableCustomizeBox(){
 		

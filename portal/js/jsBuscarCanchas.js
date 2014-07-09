@@ -1,4 +1,4 @@
-var ruta = window.location.host+"/index.php/canchas";
+var ruta = window.location.host+"/canchas";
 
 $(function(){   
     
@@ -12,6 +12,7 @@ $(function(){
     
     // ACCION COMBO DEPARTAMENTO -> BUSCAR PROVINCIAS Y DISTRITOS
     $("#btn_fnd_canchas").bind('click', function(event){
+        event.preventDefault();
         search_canchas();
     }); 
    
@@ -24,11 +25,9 @@ function search_canchas(){
     id_depa = $('#cbo_fnd_cancha_departamentos').val();
     id_prov = $('#cbo_fnd_cancha_provincias').val();
     id_dis = $('#cbo_fnd_cancha_distritos').val();
-    desc_depa = $('#cbo_fnd_cancha_departamentos option:selected').text();
-    desc_prov = $('#cbo_fnd_cancha_provincias option:selected').text();
-    desc_dis = $('#cbo_fnd_cancha_distritos option:selected').text();
-    
-    cadena = nombre_cancha+'-'+desc_depa+'-'+desc_prov+'-'+desc_dis
+    desc_depa = $('#cbo_fnd_cancha_departamentos option:selected').text().replace(" ", "-");
+    desc_prov = $('#cbo_fnd_cancha_provincias option:selected').text().replace(" ", "-");
+    desc_dis = $('#cbo_fnd_cancha_distritos option:selected').text().replace(" ", "-");
     
     if(nombre_cancha == ""){
         if(id_depa == ""){
@@ -38,10 +37,12 @@ function search_canchas(){
         }else if(id_dis == ""){
             alert("Seleccione el Distrito");
         }else{
-            window.location.href = "http://"+ruta+"/busqueda/"+cadena;
+            cadena = desc_depa+'_'+id_depa+'-'+desc_prov+'_'+id_prov+'-'+desc_dis+'_'+id_dis;
+            window.location.href = "http://"+ruta+"/portal/canchas/busqueda/"+cadena;
         }
     }else{
-        window.location.href = "http://"+ruta+"/busqueda/"+cadena;
+        cadena = nombre_cancha.replace(" ", "-");
+        window.location.href = "http://"+ruta+"/portal/canchas/busqueda/"+cadena;
     }
 }
 
@@ -50,7 +51,7 @@ function search_canchas(){
 function get_provincias(){
     $.ajax({
         type: "POST",
-        url: "index.php/inicio/getUbigeo",
+        url: "http://"+ruta+"/portal/inicio/getUbigeo",
         cache: false,
         data: {
             'name_ubigeo' : 'provincias',
@@ -76,7 +77,7 @@ function get_provincias(){
 function get_distritos(){
     $.ajax({
         type: "POST",
-        url: "index.php/inicio/getUbigeo",
+        url: "http://"+ruta+"/portal/inicio/getUbigeo",
         cache: false,
         data: {
             'name_ubigeo' : 'distritos',

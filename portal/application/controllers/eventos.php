@@ -31,7 +31,8 @@ class Eventos extends CI_Controller {
 
         
         $this->data['result'] = $this->codegen_model->get('eventos', 'nEveID,cEveLatitud,cEveLongitud,cEveTitulo,cEveDescripcion,cEveLinkFoto,cEveLinkFacebook,cEveDireccion,dEveStartTime,dEveEndTime,nUbiDepartamento,nUbiProvincia,nUbiDistrito,dEveFechaRegistro,cEveEstado,nEveCosto', 'nEveID = '. $this->uri->segment(3), 1, null);
-        
+        if(!$this->data['result'])
+            redirect('/eventos');
         $this->data['main_content'] = 'eventos/evento_detalle';
         $this->data['title'] = '.: Solo Canchas - Eventos :.';
         $this->data['menu_home'] = 'Eventos';
